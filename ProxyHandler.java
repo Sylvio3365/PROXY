@@ -50,10 +50,10 @@ public class ProxyHandler implements Runnable {
                     clientOut.print(response);
                     LogFile.logRequest(clientIp, requestLine, "200 OK");
                 } else {
-                    String errorResponse = "HTTP/1.1 4014 Not Found\r\n" +
+                    String errorResponse = "HTTP/1.1 404 Not Found\r\n" +
                             "Content-Type: text/html; charset=UTF-8\r\n" +
                             "Connection: close\r\n\r\n" +
-                            "<html><body><h1>4014 Not Found</h1><p>The page you are looking for could not be found.</p></body></html>";
+                            "<html><body><h1>404 Not Found</h1><p>The page you are looking for could not be found.</p></body></html>";
                     System.out.println("No response found");
                     clientOut.print(errorResponse);
                     LogFile.logRequest(clientIp, requestLine, "404 Not Found");
