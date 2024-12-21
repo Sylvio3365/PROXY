@@ -6,8 +6,8 @@ import java.util.TimeZone;
 
 public class CacheEntry {
     private final String value;
-    private final int expirationTime; // Temps d'expiration en minutes
-    private final long addedTime; // Temps où l'entrée a été ajoutée (en millisecondes)
+    private final int expirationTime; 
+    private final long addedTime; 
 
     public CacheEntry(String value, int expirationTime) {
         if (value == null || value.trim().isEmpty()) {
@@ -18,7 +18,7 @@ public class CacheEntry {
         }
         this.value = value;
         this.expirationTime = expirationTime;
-        this.addedTime = System.currentTimeMillis(); // Temps actuel en millisecondes
+        this.addedTime = System.currentTimeMillis(); 
     }
 
     public boolean isExpired() {
@@ -45,6 +45,5 @@ public class CacheEntry {
     public long getAddedTime() {
         return addedTime;
     }
-
 
 }

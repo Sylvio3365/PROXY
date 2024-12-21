@@ -25,7 +25,7 @@ public class LogFile {
                 System.out.println(line);
             }
         } catch (IOException e) {
-            System.err.println("Erreur lors de la lecture du fichier de journaux : " + e.getMessage());
+            System.err.println("Error while reading the log file: " + e.getMessage());
         }
     }
 }
